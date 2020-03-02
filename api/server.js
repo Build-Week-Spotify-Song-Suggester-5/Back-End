@@ -18,7 +18,7 @@ server.use('/api/users', restricted, usersRouter);
 server.use('/api/songs', restricted, songsRouter);
 
 server.get('/', (req, res) => {
-    res.send("Server endpoint");
+    res.send("Welcome to Spotify Song Suggester");
   });
 
 module.exports = server;
