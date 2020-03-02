@@ -15,7 +15,7 @@ server.use(cors());
 
 server.use('/api/auth', authRouter);
 server.use('/api/users', restricted, usersRouter);
-server.use('/api/songs', restricted, songsRouter);
+server.use('/api/songs', songsRouter);
 
 server.get('/', (req, res) => {
     res.send("Welcome to Spotify Song Suggester");
