@@ -1,6 +1,4 @@
-const express = require("express");
 const db = require("./songs-model");
-//const authenticate = ('../auth/authenticate-middleware');
 const router = require('express').Router();
 
 router.get("/",  async (req, res, next) => {
