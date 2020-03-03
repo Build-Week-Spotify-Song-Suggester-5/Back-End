@@ -21,7 +21,7 @@ module.exports = {
 // }
 
 function getSongs(){
-    return db2("Spotify_Songs").limit(100);
+    return db2("Spotify_Songs").limit(10000);
 }
 
 async function addSong(reqBody){
