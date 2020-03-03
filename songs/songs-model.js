@@ -1,15 +1,27 @@
+const knex = require('knex');
 const db = require("../data/dbConfig")
+
+const db2 = knex({
+    client: 'sqlite3',
+    connection: {
+      filename: './data/Spotify_Songs.db3'
+    },
+    useNullAsDefault: true
+  });
 
 module.exports = {
     getSongs,
     addSong,
     updateSong,
     deleteSong,
-    
 }
 
+// function getSongs(){
+//     return db("songs")
+// }
+
 function getSongs(){
-    return db("songs")
+    return db2("Spotify_Songs")
 }
 
 async function addSong(reqBody){
