@@ -16,13 +16,13 @@ module.exports = {
     deleteSong,
 }
 
-// function getSongs(){
-//     return db("songs")
-// }
-
 function getSongs(){
-    return db2("Spotify_Songs")
+    return db("songs")
 }
+
+// function getSongs(){
+//     return db2("Spotify_Songs")
+// }
 
 async function addSong(reqBody){
   const [ id ] = await db("songs").insert(reqBody)
