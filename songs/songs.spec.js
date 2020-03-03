@@ -18,7 +18,5 @@ describe('songs model', () => {
            let song = await Songs.addSong({ song_name: 'test', artist_name:'test' });
            expect(song.song_name).toBe('test')
        })
-      
        })
-
    })

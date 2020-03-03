@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --watchAll",
     "server": "nodemon",
     "start": "node index.js"
   },
