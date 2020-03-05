@@ -9,9 +9,9 @@ const restricted = require('../auth/restricted-middleware');
 
 const server = express();
 
+server.use(cors());
 server.use(helmet());
 server.use(express.json());
-server.use(cors());
 
 server.use('/api/auth', authRouter);
 server.use('/api/users', restricted, usersRouter);
